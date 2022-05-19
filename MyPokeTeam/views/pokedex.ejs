@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include("partials/head") %> 
+    <%- include("partials/navbar") %> 
+    <div class="poke-container">
+        <% for(let pokemon of pokemons) { %>
+            <div class="poke-info">
+                <h2>#<%=pokemon.id%> <%= pokemon.name%> </h2>
+                <img src="<%= pokemon.sprites.front_default %> " alt="">
+                <span>
+                    <%=pokemon.types[0].type.name%>
+                    <% if (pokemon.types[1]) { %>
+                        ,<%=pokemon.types[1].type.name%>         
+                    <% } %> 
+                </span>
+                <form action="/pokedex/team" method="POST">
+                    <input type="text" name="pokeId" value="<%= pokemon.id %>" style="display:none;">
+                    <button type="submit" class="btn">Add to team</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+    <footer class="footer-next">
+        <button class="btn"><a href="/pokedex/2" class="">Next</a></button>
+    </footer>
+</body>
+</html>

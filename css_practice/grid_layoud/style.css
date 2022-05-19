@@ -1,0 +1,29 @@
+body{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.container {
+    display: grid;
+    justify-content: center;
+    background-color: lightblue;
+    grid-template-columns: 100px 100px 100px;
+    grid-template-rows: 50px 100px 50px 50px 50px;
+}
+
+.container div {
+    border: rgb(125, 186, 224) 1px solid;
+    text-align: center;
+}
+
+
+.display{
+    grid-column: 1/ span 3;
+}
+.equals{
+    grid-column: 1/span 3;
+}
+.remove{
+    grid-column: 1/span 2;
+
+}

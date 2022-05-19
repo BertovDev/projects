@@ -1,0 +1,47 @@
+*, *::before , *::after {
+    box-sizing: border-box;
+    font-family: 'Alfa Slab One', cursive;
+    font-weight: normal;
+}
+
+body{
+    background: linear-gradient(to right,#9bf6ff,#bdb2ff);
+}
+
+section{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: bold;
+}
+
+h2{
+    font-size: 2rem;
+    margin: 0 0 20px;
+}
+
+img {
+    width: 500px;
+    border: solid #bdb2ff 1px;
+}
+
+.selectors {
+    font-size: 1.5rem;
+    margin: .3rem;
+}
+
+.btn {
+    cursor: pointer;
+    width: 15rem;
+    height: 4rem;
+    margin-top: 1rem;
+    background-color: #bdb2ff;
+    border: solid #a0c4ff 3px;
+    font-size: 1.5rem;
+
+}

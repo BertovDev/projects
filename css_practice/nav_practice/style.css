@@ -1,0 +1,118 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans&display=swap');
+
+:root {
+    font-size: 16px;
+    font-family: 'Open Sans', sans-serif;
+    --bg-primary : #1d3557;
+    --text-secondary : #3a22c3;
+    --text-primary : #a8dadc;
+    --bg-secondary: #f1faee;
+    --btn-bg:#023e8a ;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    background: rgb(58,34,195);
+    background: linear-gradient(90deg, rgba(58,34,195,1) 0%, rgba(52,96,220,1) 51%, rgba(43,178,254,1) 100%);
+}
+
+.logo{
+    font-size: 1.2rem;
+    color: var(--bg-secondary);
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: all 280ms ease-in-out;
+}
+
+.logo:hover{
+    color: var(--btn-bg);
+    
+}
+
+.nav-container{
+    background-color: var(--text-secondary);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 50px;
+    padding: 20px 20px;
+}
+
+.nav-links {
+    font-weight: 600;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    align-items: center;
+    display: flex;
+    width: 40%;
+    justify-content: space-evenly ;
+    list-style: none;
+    font-size: 1.2rem;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: var(--bg-secondary);
+    transition: all 280ms ease-in-out;
+}
+
+.nav-links a:hover{
+    color: var(--btn-bg);
+}
+
+.btn{
+    font-weight: 600;
+    cursor: pointer;
+    height: 30px;
+    width: 70px;
+    background-color:var(--btn-bg);
+    border: solid 3px var(--btn-bg);
+    border-radius: 5%;
+    color: var(--bg-secondary);
+    transition: all 280ms ease-in-out;
+    box-shadow: 0 7px 5px var(--bg-primary);
+}
+
+.btn:hover{
+    color: var(--text-primary);
+}
+
+.burger{
+    cursor: pointer;
+    display: none;
+    border: white solid 2px;
+    padding: 1px;
+    border-radius: 15%;
+    box-shadow: 0 2px 5px var(--btn-bg);
+}
+
+.burger div{
+    width: 30px;
+    height: 4px;
+    background-color: white;
+    margin: 4px;
+    box-shadow: 0 2px 5px var(--btn-bg);
+}
+
+@media screen and (max-width:768px) {
+    .nav-links{
+        display: none;
+        position: absolute;
+        top: 50px;
+        right: 0px;
+        background-color: var(--text-secondary);
+        height: 100%;
+        flex-direction: column;
+        justify-content: space-around;
+        transition: all 280ms ease-in;
+    }
+    .burger{
+        display: block;
+    }
+}

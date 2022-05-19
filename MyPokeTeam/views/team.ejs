@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("partials/head") %> 
+<%- include("partials/navbar") %> 
+<body>
+    <div class="poke-container">
+        <% for(let poke of team) { %>
+            <div class="poke-info">
+                <h2>#<%= poke.numberId %> <%= poke.name %> </h2>
+                <img src="<%= poke.pokeImg %> " alt="">
+                <span><%= poke.pokeType %> </span>
+                <form action="/pokedex/team?_method=DELETE" method="POST">
+                    <input type="text" name="_id" value="<%= poke._id %>" style="display: none;">
+                    <button type="submit" class="btn">Remove From Team</button>
+                </form>
+            </div>
+        <% } %>
+    </div>
+</body>
+</html>

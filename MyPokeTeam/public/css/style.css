@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap');
+:root{
+    --bg-color:#e3350d;
+    --container-color:#00d7fc;
+    --navbar-bg:#ece9e9;
+    --pokebox-color:#e9e3e3;
+    --transition-speed: 600ms;
+    --transition-card: 300ms;
+    font-family: 'Poppins', sans-serif;
+}
+
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-transform: uppercase;
+    image-rendering: smooth;
+}
+
+body{
+    background-color: var(--container-color);
+    
+    color: black;
+}
+
+.navbar{
+    display: flex;
+    justify-content: flex-start;
+    height: 5rem;
+    background-color: var(--navbar-bg);
+    border: solid 1px var(--navbar-bg);
+    border-radius: 100px;
+    margin: 1rem;
+    box-shadow: 10px 8px 10px 0 rgba( 31, 38, 135, 0.37 );
+}
+
+.navbar-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 30%;
+    list-style: none;
+    width: 100%;
+    margin: 0 2rem 0 2rem;
+}
+
+.logo {
+    font-size: 1.5rem;
+    letter-spacing: 0.3ch;
+    cursor: pointer;
+}
+
+.logo a{
+    text-decoration: none;
+    color: var(--bg-color);
+}
+
+.poke-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    background-color: var(--container-color);
+}
+
+
+.poke-info {
+    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    width: 12%;
+    margin: 2rem 2rem 2rem 2rem;
+    padding: 2rem 0 2rem 0;
+    background-color:var(--pokebox-color) ;
+    border-radius: 10px;
+    transition: all var(--transition-card) ease;
+    backface-visibility: hidden;
+}
+
+.poke-info:hover{
+    transform: scale(1.05);
+}
+
+
+.nav-item {
+    margin: 5rem;
+}
+
+.nav-link {
+    text-decoration: none;
+    position: relative;
+    /* display:block; */
+    height: 45px;
+    width: 150px;
+    margin: 10px 7px;
+    padding: 5px 5px;
+    font-weight: 700;
+    font-size: 15px;
+    letter-spacing: 2px;
+    color: #383736;
+    text-transform: uppercase;
+    outline: 0;
+    overflow:hidden;
+    background: none;
+    z-index: 1;
+    cursor: pointer;
+    transition:         0.08s ease-in;
+    -o-transition:      0.08s ease-in;
+    -ms-transition:     0.08s ease-in;
+    -moz-transition:    0.08s ease-in;
+    -webkit-transition: 0.08s ease-in;
+}
+
+.fill:hover {
+    color: whitesmoke;
+  }
+  
+  .fill:before {
+    content: "";
+    position: absolute;
+    background: var(--bg-color);
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 100%;
+    z-index: -1;
+    -webkit-transition: top 0.09s ease-in-out;
+  }
+  
+  .fill:hover:before {
+    top: 0;
+  }
+
+.btn {
+    margin-top: 1rem;
+    width: 10rem;
+    height: 2rem;
+    background-color: var(--bg-color);
+    color: var(--pokebox-color);
+    border: solid var(--bg-color) 2px;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.search-poke{
+    margin-left: auto;
+    margin-bottom: 1rem;
+}
+
+.search-input {
+    width: 20rem;
+    height: 2rem;
+    border: solid var(--bg-color) 2px;
+    padding: 0 1rem 0 0.7rem;
+    border-radius: 10px;
+}
+
+.footer-next {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 5rem;
+    background-color: #0a1a56;
+}
+
+.footer-next button {
+    background-color: #0a1a56;
+    border-color: var(--navbar-bg);
+}
+
+.footer-next a {
+    text-decoration: none;
+    color: white;
+}
